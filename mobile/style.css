@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --hue1: 0; 
+    --hue2:218;
+    
+    --fs-heading: 4rem;
+    --lh-heading: 3.4rem;
+    --ls-heading: 0.05em;
+
+    --fs-texting: 1.8rem;
+    --lh-texting: 1.5rem;
+
+    --ff-heading: 'Staatliches', cursive;
+    --ff-texting: 'Palanquin', sans-serif;
+
+    --fc-heading: hsl(var(--hue1), 0%, 100%);
+
+    --bg-body: hsl(var(--hue1), 0%, 90%);
+    --bg-heading: hsl(var(--hue2), 17%, 62%);
+    --color-accent: hsl(275, 18%, 79%);
+
+    
+}
+
+body{
+    background: var(--bg-body);
+}
+
+header{
+    height: 27.9rem;
+    background: var(--bg-heading);
+    padding-top: 32px ;
+    margin-bottom: 1.4rem;
+}
+
+header img{
+    
+    display: block;
+    height: 13.7rem;
+    width:  13.7rem;
+    margin: 0 auto 32px;
+    
+}
+
+header h1{
+    text-align: center;
+
+    padding: 8px 0 7px;
+
+    background: var(--color-accent);
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    font-weight: 400;
+
+    color: var(--fc-heading);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    
+}
+
+.page{
+    margin: 0 auto;
+    width: 32rem;
+}
+
+.page p{
+    text-align: center;
+    font-family: var(--ff-texting);
+    font-weight: 400;
+    font-size: calc(var(--fs-texting));
+    line-height: calc(var(--lh-texting)); 
+    
+    color: #23053A;    
+
+    margin: 0 auto 6rem;
+
+}
+
+.img-container{
+    position: relative;
+}
+
+.img-container img{
+    animation: fade-from-bottom 800ms;
+}
+
+.img-container h2{
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    width: 11.2rem;
+    height: 3.5rem;
+
+    background: #FEEAFA;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: var(--ff-heading);
+    color: #4A4E69;
+    font-size: 2rem;
+    line-height: 3.4rem;
+    font-weight: 400;
+
+    letter-spacing: var(--ls-heading);
+
+    animation: fade-from-top 800ms;
+
+}
+
+.main-container{
+    display: grid;
+    gap: 3.2rem;
+    margin-bottom: 6rem;
+}
+
+@keyframes fade-from-top{
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-from-bottom{
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
